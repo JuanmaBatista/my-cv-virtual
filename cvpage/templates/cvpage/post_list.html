@@ -3,8 +3,11 @@
         <title>CV Juan Manuel Batista</title>
     </head>
     <body>
-        <div>
-            <h1><a href="/">Juan Manuel Batista</a></h1>
-        </div>
+        {% for post in posts %}
+    <div>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+        {% endfor %}
     </body>
 </html>
