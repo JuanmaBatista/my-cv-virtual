@@ -1,9 +1,8 @@
 {% extends 'cvpage/base.html' %}
+
 {% block content %}
-    {% for post in posts %}
     <div class="post">
-        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
-    {% endfor %}
 {% endblock %}
